@@ -1,0 +1,187 @@
+@use "./_color.scss" as cr;
+@use "./_anime.scss";
+@use "./_header.scss";
+@use "./_quizkanji.scss";
+@use "./quizmap.scss";
+@use "./result.scss";
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	min-height: 100vh;
+	padding-bottom: 30px;
+	background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)), linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+	background-size: 20px 20px;
+	background-repeat: repeat;
+	background-position: center center;
+	font-family: Inter;
+}
+.debag {
+	.qinfo {
+		width: 230px;
+		height: 35px;
+		font-size: 10px;
+		bottom: 20px;
+		border: dashed 2px;
+		text-align: center;
+		@media (min-width: 640px) {
+			width: 450px;
+			height: 70px;
+			font-size: 24px;
+			bottom: 20px;
+		}
+	}
+}
+
+.indexmain {
+	padding-bottom: 70px;
+	@media (min-width: 875px) {
+		padding-bottom: 90px;
+	}
+
+	.logo {
+		margin: 40px auto;
+		margin-bottom: 0px;
+		display: block;
+		max-width: 300px;
+		width: 100%;
+		@media (min-width: 875px) {
+			margin: 40px auto;
+			display: block;
+			max-width: 600px;
+		}
+	}
+	.kanji {
+		margin: 30px auto;
+		display: block;
+		max-width: 330px;
+		width: 100%;
+		@media (min-width: 875px) {
+			margin: 40px auto;
+			display: block;
+			max-width: 850px;
+		}
+	}
+	.map {
+		margin: 30px auto;
+		display: block;
+		max-width: 330px;
+		width: 100%;
+		margin-bottom: 0px;
+		@media (min-width: 875px) {
+			margin: 40px auto;
+			display: block;
+			max-width: 850px;
+		}
+	}
+}
+.selectqmain {
+	.select_dif {
+		overflow-x: auto;
+		white-space: nowrap;
+		-webkit-overflow-scrolling: touch;
+		margin-top: 60px;
+		@media (min-width: 640px) {
+			display: none;
+		}
+		li {
+			display: inline-block;
+			width: 90%;
+		}
+		.btn_select {
+			max-width: 260px;
+			width: 100%;
+		}
+	}
+	.select_difpc {
+		display: none;
+		@media (min-width: 640px) {
+			margin-top: 60px;
+			list-style: none;
+			justify-content: center;
+			display: flex;
+			gap: 7%;
+			.btn_select {
+				max-width: 310px;
+				width: 100%;
+				&:hover {
+					opacity: 0.8;
+					transition: 0.3s;
+				}
+			}
+		}
+	}
+
+	.selectnow_dif {
+		animation-name: selectAnime;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	.selectnow_difmb {
+		animation-name: selectAnimemb;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	.start {
+		margin: 0;
+		text-align: center;
+		@media (min-width: 640px) {
+			margin-top: 60px;
+		}
+		.startbtn {
+			text-align: center;
+			color: cr.$white;
+			width: 100%;
+			border: none;
+			border-radius: 20px;
+			background-color: cr.$yellow;
+			font-size: 20px;
+			max-width: 160px;
+			height: 60px;
+			@media (min-width: 640px) {
+				font-size: 64px;
+				max-width: 477px;
+				height: 171px;
+			}
+		}
+	}
+}
+
+.main_footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: cr.$grean;
+	width: 100%;
+	max-height: 27px;
+	text-align: center;
+	@media (min-width: 875px) {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: cr.$grean;
+		width: 100%;
+		max-height: 90px;
+		text-align: center;
+	}
+	p {
+		margin: 0;
+		line-height: 27px;
+		text-align: center;
+		font-size: 12px;
+		color: cr.$white;
+		@media (min-width: 875px) {
+			margin: 0;
+			line-height: 90px;
+			text-align: center;
+			font-size: 32px;
+			color: cr.$white;
+		}
+	}
+}
+
+.hide {
+	display: none;
+}

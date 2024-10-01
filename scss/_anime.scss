@@ -1,0 +1,20 @@
+@keyframes selectAnime {
+	0% {
+		outline-style: none;
+	}
+
+	10% {
+		outline-style: solid;
+		outline-color: yellow;
+		outline-width: 5px;
+	}
+}
+@keyframes selectAnimemb {
+	0% {
+		opacity: 100%;
+	}
+
+	10% {
+		opacity: 80%;
+	}
+}

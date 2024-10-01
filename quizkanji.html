@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/main.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
+		<title>test</title>
+	</head>
+	<body>
+		<header class="quiz_header">
+			<a href="selectqkanji.html" class="backpc">もどる</a>
+			<a href="index.html" class="homelink"><img src="image/headlogo.png" /></a>
+		</header>
+		<main class="quizmain">
+			<a href="selectqkanji.html" class="backmb">＜もどる</a>
+			<div class="quiz">
+				<p class="mb">○</p>
+				<p class="smalltext">第?問</p>
+				<div class="q_text">問題</div>
+				<img class="placeimg" />
+				<p class="ans">回答</p>
+				<div class="inputtext">
+					<input type="text" class="q_inp" oncopy="return false" onpaste="return false" oncontextmenu="return false" pattern="^[ぁ-ん]+$" placeholder="入力してください" />
+				</div>
+				<p class="qinfo">説明文</p>
+				<p class="push hide">Push Enter</p>
+				<p class="tap hide">Tap Screen</p>
+				<script>
+					document.querySelector(".q_inp").focus();
+				</script>
+			</div>
+			<div class="after_q hide">
+				<div class="nextbutton">
+					<button class="retry" onclick="location.href='./quizkanji.html'">もう一度挑戦する</button>
+					<button class="title" onclick="location.href='./index.html'">タイトルへ戻る</button>
+				</div>
+				<div class="pointout">
+					<p class="pointtitle">結果</p>
+					<p class="point">100点/100点</p>
+				</div>
+				<div class="resultkanji"></div>
+				<div class="nextbuttonbottom">
+					<button class="retrybottom" onclick="location.href='./quizkanji.html'">もう一度挑戦する</button>
+					<button class="titlebottom" onclick="location.href='./index.html'">タイトルへ戻る</button>
+				</div>
+			</div>
+		</main>
+		<footer class="main_footer">
+			<p>&copy;hokkaidotimeiquiz</p>
+		</footer>
+		<script src="js/gamekanji.js"></script>
+	</body>
+</html>
